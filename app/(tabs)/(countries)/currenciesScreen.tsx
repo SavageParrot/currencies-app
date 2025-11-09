@@ -7,7 +7,7 @@ import CountryCard from "@/components/CountryCard";
 import FilterPicker from "@/components/FilterPicker";
 import SkeletonCountryCard from "@/components/SkeletonCountryCard";
 // GraphQL
-import { GET_COUNTRIES_BY_NAME } from "@/graphQL/countriesQuery";
+import { GET_COUNTRIES_BY_NAME } from "@/api/queries/countriesQuery";
 import { useQuery } from "@apollo/client/react";
 // Hooks & utilities
 import useDebouncedValue from "@/hooks/useDebouncedValue";
@@ -50,7 +50,6 @@ const CountriesCurrencies = () => {
 
   return (
     <View style={styles.container}>
-      {/* <View style={styles.inputContainer}></View> */}
       <Input
         placeholder="Buscar país"
         leftIcon={
@@ -122,7 +121,6 @@ const CountriesCurrencies = () => {
 const styles = StyleSheet.create({
   container: {
     width: "100%",
-    // backgroundColor: "#030d1fff",
     flex: 1,
   },
   inputContainer: {
@@ -168,7 +166,6 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     marginBottom: 8,
-    // backgroundColor: '#071a36ff'
   },
 });
 

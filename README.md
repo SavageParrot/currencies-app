@@ -44,6 +44,18 @@ Este proyecto está desarrollado con [Expo SDK 54](https://expo.dev) TypeScript 
 
 > Recomendación: Usar Expo Go es la forma más rápida y sencilla de probar la app en tu teléfono.
 
+## Manual de uso
+
+### Búsqueda de países
+
+- La búsqueda de países solo inicia cuando se ingresan dos o más caracteres.
+- Se utiliza un debounce de 1 segundo para evitar disparar la consulta en cada letra digitada.
+- La búsqueda es insensible a mayúsculas y minúsculas (incasesensitive), por lo que se mostrarán todos los resultados que coincidan, por ejemplo, al buscar "co" se mostrarán países como "Colombia" (que inicia con mayúscula) y otros que contengan "co" en su nombre como "Democratic Republic of Congo".
+
+### Filtros
+
+- Los filtros se aplican únicamente a los resultados obtenidos de la búsqueda.
+- Si no hay resultados, los filtros no se habilitan.
 
 ## Librerías clave utilizadas
 

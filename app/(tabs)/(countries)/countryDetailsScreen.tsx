@@ -1,9 +1,12 @@
-import CountryDetailItem from "@/components/CountryDetailItem";
-import { CountryData } from "@/types/currenciesTypes";
 import { useLocalSearchParams } from "expo-router";
 import React, { useMemo } from "react";
+// UI elements
 import { ScrollView, StyleSheet, View } from "react-native";
 import { Text } from "react-native-elements";
+// Components
+import CountryDetailItem from "@/components/CountryDetailItem";
+// Types
+import { CountryData } from "@/types/currenciesTypes";
 
 const CountryDetails = () => {
   const { countryData } = useLocalSearchParams();

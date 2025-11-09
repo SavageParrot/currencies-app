@@ -1,6 +1,10 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
 
+/**
+ * Componente skeleton para mostrar la carga de una tarjeta de país.
+ * @returns {JSX.Element}
+ */
 const SkeletonCountryCard = () => (
   <View style={styles.card}>
     <View style={styles.hstack}>

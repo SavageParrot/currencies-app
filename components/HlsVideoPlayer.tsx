@@ -3,10 +3,19 @@ import { useEffect, useState } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 
+/**
+ * Props para el componente HlsVideoPlayer
+ * @property {string} hlsUrl - URL del stream HLS
+ */
 interface HlsVideoPlayerProps {
-    hlsUrl: string;
+  hlsUrl: string;
 }
 
+/**
+ * Componente para reproducir video HLS.
+ * @param {HlsVideoPlayerProps} props
+ * @returns {JSX.Element}
+ */
 const HlsVideoPlayer = ({ hlsUrl }: HlsVideoPlayerProps) => {
   const player = useVideoPlayer({
     uri: hlsUrl,

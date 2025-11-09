@@ -3,10 +3,20 @@ import { useRouter } from "expo-router";
 import React, { useCallback, useMemo } from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 
+/**
+ * Props para el componente CountryCard
+ * @property {CountryData} countryData - Datos del país a mostrar en la tarjeta
+ */
 interface CountryCardProps {
   countryData: CountryData;
 }
 
+/**
+ * Componente que muestra la información de un país en una tarjeta interactiva.
+ * Navega a la pantalla de detalles al hacer click.
+ * @param {CountryCardProps} props - Props del componente
+ * @returns {JSX.Element}
+ */
 const CountryCard = React.memo(({ countryData }: CountryCardProps) => {
   const router = useRouter();
 
