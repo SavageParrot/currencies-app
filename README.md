@@ -8,12 +8,12 @@ Este proyecto está desarrollado con [Expo SDK 54](https://expo.dev) TypeScript 
 ├── package.json
 ├── tsconfig.json
 ├── api/                # Cliente GraphQL
+│   └── queries/        # Consultas GraphQL
 ├── app/                # Pantallas y rutas principales
 │   ├── (tabs)/         # Pantallas de pestañas
 │   └── (countries)/    # Pantallas de países y monedas
 ├── assets/             # Imágenes y recursos
 ├── components/         # Componentes reutilizables
-├── graphQL/            # Consultas GraphQL
 ├── hooks/              # Custom hooks
 ├── types/              # Tipos TypeScript
 ├── utils/              # Funciones utilitarias
