@@ -1,50 +1,64 @@
-# Welcome to your Expo app 👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+# currencies-app
 
-## Get started
+Este proyecto está desarrollado con [Expo SDK 54](https://expo.dev) TypeScript y React Native. La estructura del proyecto es la siguiente:
 
-1. Install dependencies
+```
+├── app.json
+├── package.json
+├── tsconfig.json
+├── api/                # Cliente GraphQL
+├── app/                # Pantallas y rutas principales
+│   ├── (tabs)/         # Pantallas de pestañas
+│   └── (countries)/    # Pantallas de países y monedas
+├── assets/             # Imágenes y recursos
+├── components/         # Componentes reutilizables
+├── graphQL/            # Consultas GraphQL
+├── hooks/              # Custom hooks
+├── types/              # Tipos TypeScript
+├── utils/              # Funciones utilitarias
+```
+
+
+## ¿Cómo ejecutar la app?
+
+1. Instala las dependencias:
 
    ```bash
    npm install
    ```
 
-2. Start the app
+2. Crea el archivo de variables de entorno en la raíz del proyecto llamado `.env` y agrega la siguiente variable:
 
-   ```bash
-   npx expo start
+   ```env
+   EXPO_PUBLIC_COUNTRIES_API=https://countries.trevorblades.com/
    ```
 
-In the output, you'll find options to open the app in a
+3. Inicia la app con el siguiente comando (esto limpia la caché y evita errores previos):
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+   ```bash
+   npx expo start --clear
+   ```
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+4. En la consola de Expo se mostrará un código QR. **Escanea ese código QR con la app móvil [Expo Go](https://expo.dev/go)** para simular la aplicación directamente en tu dispositivo móvil, sin necesidad de instalar emuladores como los de Android Studio.
 
-## Get a fresh project
+> Recomendación: Usar Expo Go es la forma más rápida y sencilla de probar la app en tu teléfono.
 
-When you're ready, run:
 
-```bash
-npm run reset-project
-```
+## Librerías clave utilizadas
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+- **expo-video**: Reproducción de video en la app.
+- **react-native-elements**: Componentes UI reutilizables y estilizados.
+- **@apollo/client**: Cliente GraphQL para consumir APIs.
+- **expo-router**: Navegación basada en archivos.
+- **react-native-svg**: Soporte para gráficos vectoriales.
+- **expo-image**: Optimización y manejo de imágenes.
 
-## Learn more
+Estas librerías permiten construir una app moderna, modular y fácil de mantener.
 
-To learn more about developing your project with Expo, look at the following resources:
+## Recursos útiles
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+- [Expo documentación](https://docs.expo.dev/)
+- [Tutorial Expo](https://docs.expo.dev/tutorial/introduction/)
 
-## Join the community
 
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
